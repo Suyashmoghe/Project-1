@@ -1,0 +1,487 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Meow+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
+/*press shift+d dev mode se wapas desin mode me aane k liye figma me
+ager dimentions dekhne hai toh alt press, figma pe kisi bhi elemt ko control+mouse click se select kr k
+*/
+
+
+*,::before,::after{
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+img{
+    vertical-align: bottom;
+}
+button{
+    cursor: pointer;
+}
+label{
+    display: inline-block;
+}
+body{
+    font: 16px Poppins, sans-serif;
+}
+html{
+    font-size: 10px;
+    --blue: #132577;
+    --white: #fff;
+    --black: #000;
+    --yellow: #FFC107;
+    --grey: #707070;
+}
+.container{
+    max-width: 1260px;      /*pahle 1200px liya tha*/
+    margin: auto;
+    padding: 0 1rem;
+}
+.row{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 1rem;
+}
+.col-2{
+    grid-column: span 2;
+}
+.col-3{
+    grid-column: span 3;
+}
+.col-4{
+    grid-column: span 4;
+}
+.col-6{
+    grid-column: span 6;
+}
+.col-12{
+    grid-column: span 12;
+}
+/*some helper class*/
+.flex{
+    display: flex;
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.align-items{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+.justify-right{
+    justify-content: right;
+}
+.resp-img{
+    width: 100%;
+    height: auto;
+}
+.text-center{
+    text-align: center;
+}
+.op{
+    opacity: 0.6;
+}
+.gap-20{
+    gap: 2rem;
+}
+.bg-yellow{
+    color: var(--yellow);
+}
+.bg-gray{
+    color: var(--grey);
+}
+
+@media screen and (max-width:1279px){
+    .banner-text{
+        padding-right: 20px;
+    }
+    .service{
+        padding: 45px 15px 41px 15px;
+    }
+
+}
+@media screen and (max-width:980px){
+    header nav ul{
+        gap: 2rem;
+    }
+        .col-t-2{
+            grid-column: span 2;
+        }
+        .col-t-3{
+            grid-column: span 3;
+        }
+        .col-t-4{
+            grid-column: span 4;
+        }
+        .col-t-6{
+            grid-column: span 6;
+        }
+        .col-t-12{
+            grid-column: span 12;
+        }
+        .col-o-before{
+            order: -1;
+        }
+        .banner figure{
+            justify-content: center;
+        }
+        .service{
+            padding: 45px 80px 41px 80px;
+        }
+        .accordian img{
+            width: 120px;
+        }
+        .preview-top{
+            padding: 75px 24px 0;
+        }
+
+}
+@media screen and (max-width:767px){
+    header nav{
+        display: none;
+    }
+    header nav ul{
+        gap: 2rem;
+    }
+        .col-m-2{
+            grid-column: span 2;
+        }
+        .col-m-3{
+            grid-column: span 3;
+        }
+        .col-m-4{
+            grid-column: span 4;
+        }
+        .col-m-6{
+            grid-column: span 6;
+        }
+        .col-m-12{
+            grid-column: span 12;
+        }
+         .service{
+            padding: 45px 40px 41px 60px;
+        }
+        .accordian>ul{
+            flex-direction: column;
+        }
+        .accordian>ul{
+            flex-flow: column;
+        }
+        .accordian li > .flex{
+            flex-flow: column;
+}
+        .accordian a.vert{
+            line-height: 85px;
+            width: 100%;
+            writing-mode: horizontal-tb;
+            height: auto;
+}
+    }
+@media screen and (max-width:460px){
+    .col-p-2{
+        grid-column: span 2;
+    }
+    .col-p-3{
+        grid-column: span 3;
+    }
+    .col-p-4{
+        grid-column: span 4;
+    }
+    .col-p-6{
+        grid-column: span 6;
+    }
+    .col-p-12{
+        grid-column: span 12;
+    }
+    .service{
+            padding: 45px 50px 41px 80px;
+        }
+        .project-content{
+            margin-left: 70px;
+        }
+
+}
+
+.wrap-1{
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 50px 0;
+    background: url(../img/banner-bg.svg);
+    background-size: cover;
+    padding-bottom: 80px;
+}
+header{
+    padding: 6rem 0;
+}
+header a{
+    color: inherit;
+    white-space: nowrap;
+}
+header nav ul{
+    gap: 3rem;
+}
+header nav a{
+    font-size: 14px;
+    font-weight: 600;
+    color: inherit;
+}
+.banner h2{
+    font-size: 28px;
+    font-weight: 600;
+}
+.banner a{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;         /*semi bold k liye 600 hota hain*/
+    color: var(--black);
+    background-color: var(--white);
+    width: 185px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+
+}
+.banner p{
+    line-height: 1.7;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.banner-text{
+    padding-right: 137px;
+}
+.wrap-2{
+    background-color: var(--white);
+    color: var(--black);
+    padding: 100px 0;
+}
+main h2{
+    font-size: 20px;
+    font-weight: 500;      /*500 medium bold k liye hota hain*/
+    color: var(--blue);
+}
+main h2+p{
+    font-size: 28px;
+    font-weight: 700;
+}               /*matlab h2 k adjasent wala element*/
+.service{
+    box-shadow: 0 0 10px #0000001a;
+    padding: 45px 60px 41px 30px;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+.service h3{
+    font-size: 20px;
+    font-weight: 600;
+}
+.service p{
+    font-size: 16px;
+    opacity: 0.6;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+.service a{
+    color: inherit;
+    font-size: 14px;
+}
+.for-bg1{
+    background-color: var(--blue);
+    color: var(--white);
+}
+.for-bg2{
+    position: relative;
+}
+.for-bg2::before{
+    content: "";
+    position: absolute;
+    height: 15px;
+    left: 0;                       /*before jis elemnt pe lagta hai ye us element ka first child ban jaata hain*/
+    right: 0;
+    top: 0;
+    background-color: var(--blue);
+    border-radius: 5px 5px 0 0;               /*top left top right bottom right bottom left*/
+}
+
+.info{
+    text-align: center;
+    margin: 10rem 0;
+}
+.info b{
+    font-size: 28px;
+    font-weight: 600;
+}
+.info small{
+    font-size: 14px;
+    font-weight: 500;
+}
+.about{
+    margin: 10rem 0;
+}
+.about ul{
+    list-style: disc;
+    padding-left: 4rem;
+}
+.about-second-p{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+.our-work{
+    margin: 10rem 0;
+}
+.testimonials{
+    margin: 10rem 0;
+}
+.projects{
+    margin: 10rem 0;
+}
+.team{
+    margin: 10rem 0;
+    text-align: center;
+}
+.accordian{
+    margin-top: 40px;
+}
+.accordian .collapse{
+    display: none;
+}
+.accordian li.active .collapse{
+    display: block;
+}
+.accordian a.vert{
+    display: block;
+    width: 85px;
+    height: 300px;
+    writing-mode: sideways-lr;
+    flex-shrink: 0;
+    text-align: center;
+    line-height: 81px;
+    box-shadow: 0 0 18px #0000001a;
+    font-size: 24px;
+    font-weight: 500;
+    border: 2px solid transparent;
+}
+.accordian-img{
+    flex-shrink: 0;
+}
+.accordian li.active a.vert{
+    border: 2px solid var(--blue);
+}
+.accordian h3{
+    font-size: 24px;
+    font-weight: 500;
+}
+.accordian p{
+    font-size: 14px;
+    opacity: 0.6;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.accordian>ul{
+    gap: 2rem;
+}
+.accordian .learn-more{
+    display: block;
+    line-height: 51px;
+    width : 185px;
+    text-align: center;
+    background-color: var(--blue);
+    color: var(--white);
+    border-radius: 5px;
+}
+.review{
+    margin-top: 4rem;
+}
+.review-top{
+    padding: 25px 64px;
+    box-shadow: 0 0 18px #0000001a;
+    text-align: center;
+
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;*/
+}
+.review h3{
+    margin-top: 54px;
+}
+.client-photo{
+    transform: translateY(54px);
+}
+.project-content{
+    margin-left: 70px;
+}
+.projects .projectP{
+    font-size: 14px;
+    line-height: 25px;
+    margin: 25px 0;
+}
+.projects a{
+    display: inline-block;
+    width: 214px;
+    line-height: 51px;
+    background: var(--blue);
+    color: var(--white);
+    text-align: center;
+    border-radius: 5px;
+
+}
+.team-member{
+    padding: 5px;
+    box-shadow: 0 0 18px #0000001a;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    margin-top: 40px;
+}
+.social{
+    justify-content: center;
+    gap: 50px;
+    margin: 40px 0 60px;
+}
+.team h3{
+    font-size: 24px;
+    font-weight: 500;
+    margin: 20px 0;
+}
+.team small{
+    font-size: 16px;
+}
+.team-member:hover{
+    border-color: var(--blue);
+}
+.review-bottom{}
+
+.wrap-3{
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 60px 0;
+}
+.footer-bottom{
+    color: var(--grey);
+}
+.footer-top{
+    margin-bottom: 40px;
+}
+.footer-top p{
+    color: var(--white);
+    margin-right: 150px;
+}
+.footer-top h3{
+    color: var(--grey);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.footer-top a{
+    color: inherit;
+    line-height: 40px;
+}
